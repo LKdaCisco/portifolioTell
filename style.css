@@ -556,14 +556,16 @@ form #btn-enviar input:hover {
     100% { color: green; }
 }
 
+/* ... SEUS ESTILOS GERAIS EXISTENTES ... */
+
 /* ------------------------------------- */
 /* RESPONSIVIDADE */
 /* ------------------------------------- */
 
-/* Para telas até 768px (tablets e smartphones maiores) */
+/* Para telas até 768px (tablets em modo retrato e smartphones maiores) */
 @media screen and (max-width: 768px) {
     #interface {
-        padding: 0 5%; /* Adiciona um padding horizontal para não colar nas bordas */
+        padding: 0 4%; /* Ajusta um pouco o padding horizontal */
     }
 
     /* HEADER */
@@ -571,16 +573,24 @@ form #btn-enviar input:hover {
         flex-direction: column; /* Empilha logo, menu e botões */
         gap: 15px; /* Espaço entre os itens */
         align-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Garante que o texto esteja centralizado se houver */
+    }
+
+    #logo img {
+        width: 80px; /* Reduz o tamanho da logo no mobile */
+        height: 80px;
     }
 
     #menu-desktop ul {
         padding: 0;
         text-align: center;
+        width: 100%; /* Ocupa a largura total para centralizar melhor */
     }
 
     #menu-desktop ul li {
         display: block; /* Cada item do menu em uma nova linha */
         padding: 8px 0; /* Espaçamento vertical */
+        font-size: 17px; /* Leve ajuste no tamanho da fonte do menu */
     }
 
     #btn-contato {
@@ -596,241 +606,263 @@ form #btn-enviar input:hover {
     }
 
     .cert-icons i {
-        font-size: 28px; /* Ajusta o tamanho para mobile */
+        font-size: 26px; /* Ajusta o tamanho para mobile */
     }
 
     /* SEÇÃO TOPO SITE */
     #topo-site {
         flex-direction: column-reverse; /* Inverte a ordem: imagem no topo, depois texto */
-        gap: 40px;
-        padding: 50px 0; /* Ajuste o padding */
+        gap: 30px; /* Reduz o espaço entre os elementos */
+        padding: 40px 0; /* Ajuste o padding */
     }
 
     #topo-site #txt-topo-site {
         margin-right: 0; /* Remove a margem extra */
         text-align: center; /* Centraliza o texto */
-        padding: 0 15px; /* Padding interno */
+        padding: 0 10px; /* Padding interno */
     }
 
     #topo-site h1, #topo-site span {
-        font-size: 32px; /* Reduz o tamanho da fonte do título */
+        font-size: 28px; /* Reduz o tamanho da fonte do título principal */
+        line-height: 1.3;
     }
 
     #topo-site p {
-        font-size: 14px; /* Reduz o tamanho da fonte do parágrafo */
-        margin: 20px 0;
+        font-size: 15px; /* Reduz o tamanho da fonte do parágrafo */
+        margin: 15px 0;
+        text-align: center; /* Centraliza o texto longo */
     }
 
     #topo-site img {
-        width: 250px;
-        height: 250px;
+        width: 220px; /* Reduz o tamanho da imagem */
+        height: 220px;
     }
 
     /* SEÇÃO ESPECIALIDADES */
     #especialidades h2 {
-        font-size: 36px; /* Ajusta o título */
+        font-size: 32px; /* Ajusta o título */
+        margin-bottom: 30px;
     }
 
     #especialidades #container {
         flex-direction: column; /* Coloca as caixas uma abaixo da outra */
         align-items: center; /* Centraliza as caixas */
-        gap: 25px; /* Espaço entre as caixas */
+        gap: 20px; /* Espaço entre as caixas */
     }
 
     #especialidades .especialidades-box {
         width: 90%; /* Ocupa mais largura em telas menores */
-        max-width: 400px; /* Limita para não ficar muito largo em telas maiores dentro da media query */
-        padding: 25px;
+        max-width: 320px; /* Limita para não ficar muito largo */
+        padding: 20px;
+        font-size: 14px;
+    }
+    #especialidades .especialidades-box i {
+        font-size: 55px; /* Reduz o tamanho dos ícones das caixas */
+    }
+    #especialidades .especialidades-box h3 {
+        font-size: 20px;
     }
 
     /* SEÇÃO SOBRE MIM */
     section#sobre #interface {
         flex-direction: column; /* Empilha imagem e texto */
-        gap: 30px;
+        gap: 25px;
     }
 
     section#sobre #img-sobre img {
-        width: 280px; /* Ajusta o tamanho da imagem */
+        width: 250px; /* Ajusta o tamanho da imagem */
     }
 
     section#sobre #txt-sobre {
         text-align: center; /* Centraliza o texto */
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     section#sobre #txt-sobre h2 {
-        text-align: center; /* Centraliza o título "Olá, sou Lucas Gabriel" */
-        font-size: 36px;
+        font-size: 32px;
+        text-align: center; /* Garante centralização do título "Olá, sou Lucas Gabriel" */
     }
-
     section#sobre #txt-sobre p {
-        font-size: 18px; /* Ajusta o tamanho do parágrafo */
-        margin: 25px 0;
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 20px 0;
     }
 
     section#sobre #txt-sobre .btn-social button {
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 
     /* SEÇÃO PROJETOS */
     #projetos {
-        padding: 50px 5%; /* Ajusta o padding */
+        padding: 40px 4%; /* Ajusta o padding */
+    }
+    #projetos h2 {
+        margin-bottom: 30px;
     }
 
     #projetos #interface {
         flex-direction: column; /* Empilha os projetos */
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     #projetos .img-projetos {
-        width: 90%;
-        max-width: 350px; /* Limita a largura */
-        height: 380px;
+        width: 90%; /* Mais largura */
+        max-width: 300px; /* Limita a largura */
+        height: 320px; /* Ajusta a altura */
     }
 
     /* SEÇÃO FORMULÁRIO */
     #formulario h2 {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 15px;
     }
 
     #formulario p {
-        font-size: 18px;
-        margin-bottom: 30px;
+        font-size: 16px;
+        margin-bottom: 25px;
     }
 
     form {
         width: 90%; /* Ocupa mais largura */
-        padding: 20px;
-    }
-
-    form #btn-enviar input {
-        width: 180px;
-        height: 50px;
-        font-size: 18px;
-    }
-
-    /* BOTÃO VOLTAR AO TOPO */
-    #btn-to-top {
-        padding: 12px 15px;
-        font-size: 16px;
-        bottom: 15px;
-        right: 15px;
-    }
-
-    #btn-to-top i {
-        font-size: 20px;
-    }
-
-    /* RODAPÉ */
-    #rodape {
-        font-size: 0.8em; /* Ajusta o tamanho da fonte do rodapé */
-    }
-}
-
-/* Para telas muito pequenas (smartphones pequenos) */
-@media screen and (max-width: 480px) {
-    /* HEADER */
-    header #logo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    #menu-desktop ul li {
-        font-size: 16px;
-    }
-
-    header #btn-contato button {
-        padding: 10px 18px;
-        font-size: 14px;
-    }
-
-    /* Ícones de Certificado */
-    .cert-icons i {
-        font-size: 24px;
-    }
-
-    /* SEÇÃO TOPO SITE */
-    #topo-site h1, #topo-site span {
-        font-size: 28px;
-    }
-
-    #topo-site p {
-        font-size: 13px;
-        margin: 15px 0;
-    }
-
-    #topo-site img {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* SEÇÃO ESPECIALIDADES */
-    #especialidades h2 {
-        font-size: 30px;
-    }
-
-    #especialidades .especialidades-box h3 {
-        font-size: 20px;
-    }
-
-    #especialidades .especialidades-box p {
-        font-size: 14px;
-    }
-
-    /* SEÇÃO SOBRE MIM */
-    section#sobre #txt-sobre h2 {
-        font-size: 30px;
-    }
-
-    section#sobre #txt-sobre p {
-        font-size: 16px;
-    }
-
-    /* SEÇÃO PROJETOS */
-    #projetos .img-projetos {
-        width: 95%; /* Quase largura total */
-        height: 300px;
-    }
-
-    .overlay {
-        font-size: 18px;
-    }
-
-    /* SEÇÃO FORMULÁRIO */
-    #formulario h2 {
-        font-size: 30px;
-    }
-
-    #formulario p {
-        font-size: 16px;
+        padding: 15px;
     }
 
     form input, form textarea {
         padding: 12px;
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 10px; /* Reduz um pouco o espaçamento */
     }
-
     form .input-single label {
-        font-size: 16px;
+        font-size: 15px; /* Ajusta o label flutuante */
+    }
+    form .input-single .input:focus ~ label,
+    form .input-single .input:valid ~ label {
+        transform: translateY(-25px) translateX(-5px) scale(0.8);
+        font-size: 14px;
     }
 
     form #btn-enviar input {
-        width: 150px;
-        height: 45px;
+        width: 160px;
+        height: 48px;
         font-size: 16px;
     }
 
     /* BOTÃO VOLTAR AO TOPO */
     #btn-to-top {
         padding: 10px 12px;
+        font-size: 15px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #btn-to-top i {
+        font-size: 18px;
+    }
+
+    /* RODAPÉ */
+    #rodape {
+        font-size: 0.75em; /* Ajusta o tamanho da fonte do rodapé */
+    }
+}
+
+/* Para telas menores (smartphones como iPhone SE, Pixel 2, etc. - larguras até ~375px) */
+@media screen and (max-width: 425px) {
+    /* HEADER */
+    header #menu-desktop ul li {
+        font-size: 15px;
+        padding: 6px 0;
+    }
+    header #btn-contato button {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    /* Ícones de Certificado */
+    .cert-icons i {
+        font-size: 22px;
+    }
+
+    /* SEÇÃO TOPO SITE */
+    #topo-site h1, #topo-site span {
+        font-size: 24px;
+    }
+    #topo-site p {
         font-size: 14px;
+    }
+    #topo-site img {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* SEÇÃO ESPECIALIDADES */
+    #especialidades h2,
+    section#sobre #txt-sobre h2,
+    #formulario h2 {
+        font-size: 28px;
+    }
+    #especialidades .especialidades-box {
+        max-width: 280px; /* Limita ainda mais a largura das caixas */
+        padding: 18px;
+    }
+    #especialidades .especialidades-box i {
+        font-size: 50px;
+    }
+    #especialidades .especialidades-box h3 {
+        font-size: 18px;
+    }
+    #especialidades .especialidades-box p {
+        font-size: 13px;
+    }
+
+    /* SEÇÃO SOBRE MIM */
+    section#sobre #img-sobre img {
+        width: 220px;
+    }
+    section#sobre #txt-sobre p {
+        font-size: 15px;
+    }
+    section#sobre #txt-sobre .btn-social button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* SEÇÃO PROJETOS */
+    #projetos .img-projetos {
+        width: 95%; /* Quase largura total */
+        max-width: 280px;
+        height: 280px;
+    }
+    .overlay {
+        font-size: 16px;
+    }
+
+    /* SEÇÃO FORMULÁRIO */
+    #formulario p {
+        font-size: 14px;
+    }
+    form #btn-enviar input {
+        width: 140px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    /* BOTÃO VOLTAR AO TOPO */
+    #btn-to-top {
+        padding: 8px 10px;
+        font-size: 13px;
         bottom: 10px;
         right: 10px;
     }
     #btn-to-top i {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    /* RODAPÉ */
+    #rodape {
+        font-size: 0.7em;
+        padding: 15px 4%;
     }
 }
